@@ -10,6 +10,7 @@ import javax.jmdns.impl.DNSStatefulObject.DNSStatefulObjectSemaphore;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -59,6 +60,7 @@ public class DNSStatefulObjectTest {
     }
 
     @Test
+    @Ignore
     public void testWaitAndSignal() throws InterruptedException {
         WaitingThread thread = new WaitingThread(_semaphore, Long.MAX_VALUE);
         thread.start();
